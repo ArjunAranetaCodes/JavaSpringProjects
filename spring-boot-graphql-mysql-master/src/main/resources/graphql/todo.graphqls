@@ -1,0 +1,18 @@
+scalar Long
+
+type Todo {
+	id: ID!
+	todo_title: String!
+	description: String!
+}
+
+# Root
+type Query {
+	findAllTodos: [Todo]!
+	countTodos: Long!
+}
+
+# Root
+type Mutation {
+	createTodo(todo_title: String!, description: String): Todo!
+}
